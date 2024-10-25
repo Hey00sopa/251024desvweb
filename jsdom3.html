@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abru</title>
+    <style>
+        .fundoazul{
+            background-color: blue;
+        }
+
+        .fundoverde{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <p id="primeiro">paragrafo1</p>
+    <p class="Teste">paragrafo 2 </p>
+    <a href="https://www.google.com">link</a>
+    <input type="text" name="descrição" id="">
+
+    <button onclick="funcao()">getElementById</button>
+    <button onclick="funcao2()">getElementById</button>
+    <button onclick="funcao3()">getElementById</button>
+    <button onclick="funcao4()">classList1</button>
+    <button onclick="funcao5()">classList2</button>
+
+
+
+    <script>
+        function funcao(){
+            let elemento = document.getElementById("priemiro");
+            console.log('id: ' + elemento.id);
+            console.log('textContent' + elemento.textContent);
+
+            elemento.textContent = 'novo texto';
+            }
+
+            function funcao2(){
+                let elementos = document.getElementsByClassName('teste');
+
+                console.log(elementos[0].textContent);
+                console.log(elementos[1].textContent);
+            }
+
+            function funcao3(){
+                let elementos = document.querySelectorAll('p')
+
+                elementos.forEach(
+                    element => element.style.color = "green"
+                );
+            }
+
+            function funcao4 (){
+                let elementos = document.querySelector('.Teste');
+
+                elementos.classList.add('fundoazul');
+                elementos.classList.remove('fundoverde');
+                    }
+
+            function funcao5 (){
+                let elementos = document.querySelector('.Teste');
+
+                elementos.classList.remove('fundoazul');
+                elementos.classList.add('fundoverde');
+                    }
+
+            
+                    
+    </script>
+
+
+
+</body>
+</html>
